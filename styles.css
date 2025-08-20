@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Fuente tipo firma */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Fuente tipo firma tatuaje */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* Nueva fuente atractiva */
 
 * {
     margin: 0;
@@ -166,8 +167,8 @@ body {
 
 .encabezadoPrincipal__titulo {
     text-transform: none;
-    font-family: 'Great Vibes', cursive; /* Más cursiva y elegante */
-    font-weight: 400;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif; /* Fuente moderna y atractiva */
+    font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 24px;
     font-size: 54px;
@@ -512,4 +513,140 @@ body {
     .productosDestacados__lista {
         gap: 20px;
     }
+}
+
+/* Responsive nav para móviles */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+  nav ul li a {
+    display: block;
+    padding: 12px 16px;
+    width: 100%;
+  }
+}
+
+/* Oculta los enlaces del nav en móviles y muestra el botón hamburguesa */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2em;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+  }
+
+  .navegacionPrincipal__enlaces {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* ajusta según tu diseño */
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  nav.active .navegacionPrincipal__enlaces {
+    display: flex;
+  }
+
+  .navegacionPrincipal__enlace {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navegacionPrincipal__logo,
+  .navegacionPrincipal__icono {
+    z-index: 101;
+  }
+}
+
+/* Mejora visual del menú móvil */
+@media (max-width: 768px) {
+  nav.navegacionPrincipal {
+    position: relative;
+    background: #000000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 10px 0;
+  }
+
+  .navegacionPrincipal__logo {
+    margin-left: 16px;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    z-index: 200;
+    background: #fff;
+    border: none;
+    font-size: 2em;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+
+  .navegacionPrincipal__enlaces {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    z-index: 150;
+  }
+
+  nav.active .navegacionPrincipal__enlaces {
+    display: flex;
+  }
+
+  .navegacionPrincipal__enlace {
+    width: 100%;
+    padding: 16px 24px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.2s;
+  }
+
+  .navegacionPrincipal__enlace:hover {
+    background: #f5f5f5;
+  }
+
+  .navegacionPrincipal__icono {
+    display: none;
+  }
 }
