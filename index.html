@@ -3,35 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Documento</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- acerca de -->
-    <div class="acerca">
-        <a class="bg_enlaces social portafolio" href="https://www.rafaelalucas.com" target="_blank">
-            <span class="icono"></span>
-        </a>
-        <a class="bg_enlaces social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
-            <span class="icono"></span>
-        </a>
-        <a class="bg_enlaces social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
-            <span class="icono"></span>
-        </a>
-        <a class="bg_enlaces logo"></a>
-    </div>
-    <!-- fin acerca de -->
-
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('active')">&#9776;</button>
     <nav class="navegacionPrincipal">
         <div class="navegacionPrincipal__logo">
-            <img src="file.enc" alt="Logo">
+            <img src="img/file.enc" alt="Logo">
         </div>
         <div class="navegacionPrincipal__enlaces">
             <a href="" class="navegacionPrincipal__enlace">Acerca</a>
             <a href="" class="navegacionPrincipal__enlace">Productos</a>
-            <a href="" class="navegacionPrincipal__enlace">barber</a>
             <a href="" class="navegacionPrincipal__enlace">Contacto</a>
         </div>
         <div class="navegacionPrincipal__icono">
@@ -49,9 +34,10 @@
         </div>
     </nav>
     <header class="encabezadoPrincipal">
+        
         <div class="encabezadoPrincipal__contenido">
             <article class="encabezadoPrincipal__texto">
-                <p class="encabezadoPrincipal__preTitulo">pagina de ropa</p>
+                <p class="encabezadoPrincipal__preTitulo">Strett wear</p>
                 <h2 class="encabezadoPrincipal__titulo">DSclothing</h2>
                 <p class="encabezadoPrincipal__descripcion">
                     Ropa suave como un suspiro, colores que calman el alma. Vibra lenta, piel libre. Viví el presente
@@ -60,7 +46,7 @@
                 <button class="botonAccion">saber más</button>
             </article>
             <figure class="encabezadoPrincipal__imagen">
-                <img src="WhatsApp Image 2025-08-07 at 16.20.50.jpeg" alt="Imagen principal" />
+                <img src="img/WhatsApp Image 2025-08-07 at 16.20.50.jpeg" alt="Imagen principal" />
             </figure>
         </div>
     </header>
@@ -107,6 +93,10 @@
             <a href="#" class="categoria">Pantalones</a>
         </div>
     </section>
+    <div>
+        <h2 class="acercade">nosotros</h2>
+        
+    </div>
     <script src="script.js"></script>
 </body>
 
